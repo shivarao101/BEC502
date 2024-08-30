@@ -8,7 +8,7 @@ col1, col2 = st.columns((0.3,0.7),gap="large")
 with col1:
     st.image(college_pic, width=150)
 with col2:
-    st.markdown(f"### {'Vivekananda College of Engineering Technology'}")
+    st.markdown(f"### {'Vivekananda College of Engineering and Technology'}")
     st.write(f"##### {'Department of ECE, VCET Puttur'}")
 st.markdown('## DSP lab experiments')
 st.write('''1. Program to generate following discrete time sequences 
