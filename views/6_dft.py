@@ -6,6 +6,7 @@ x=st.text_input('Enter the i/p sequence x(n)',placeholder="1 2 3 4")
 x1=[int(i) for i in x.split()]
 if x1:
     X=np.fft.fft(x1)
+    st.write(f"DFT of x(n)={X}")
     fig=plt.figure()
     plt.subplot(2,1,1)
     plt.stem(range(len(X)),np.abs(X))
