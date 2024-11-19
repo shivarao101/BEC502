@@ -1,6 +1,13 @@
 import streamlit as st
 from pathlib import Path
 from PIL import Image
+import st_state_patch
+s = st.GlobalState(key="user metadata")
+if not s:
+    # Initialize it here!
+    s.counter = 0
+s.counter += 1
+
 About_page =st.Page(
     page="views/1_about.py",
     title="About",
@@ -73,4 +80,5 @@ st.markdown("""
  """, unsafe_allow_html=True) 
 st.sidebar.markdown("<p class='sidebar-text'>Website Designed by:</p>", unsafe_allow_html=True)
 st.sidebar.markdown("<p class='sidebar-text'>Shivaprasad, Dept. of ECE, VCET Puttur</p>", unsafe_allow_html=True)
+st.sidebar.markdown(f'Page viewed = {s.counter}')
 pg.run()
