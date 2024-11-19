@@ -1,11 +1,6 @@
 import streamlit as st
 from pathlib import Path
 from PIL import Image
-@st.cache_data
-def Pageviews():
-    return []
-pageviews=Pageviews()
-pageviews.append('dummy')
 About_page =st.Page(
     page="views/1_about.py",
     title="About",
@@ -78,8 +73,4 @@ st.markdown("""
  """, unsafe_allow_html=True) 
 st.sidebar.markdown("<p class='sidebar-text'>Website Designed by:</p>", unsafe_allow_html=True)
 st.sidebar.markdown("<p class='sidebar-text'>Shivaprasad, Dept. of ECE, VCET Puttur</p>", unsafe_allow_html=True)
-try:
-    st.markdown('Page viewed = {} times.'.format(len(pageviews)))
-except ValueError:
-    st.markdown('Page viewed = {} times.'.format(1))
 pg.run()
